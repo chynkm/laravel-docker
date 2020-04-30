@@ -16,7 +16,7 @@ git clone <laravel-docker-git-link> docker
 echo "docker" >> .gitignore
 ```
 
-Replace ```app-name``` with project repo name
+In ```docker-compose.yml``` Replace ```app-name``` with project repo name
 
 from ```docker``` folder
 
