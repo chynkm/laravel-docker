@@ -7,7 +7,7 @@
 
 ## Setup instructions
 
-* Checkout Leads Repo
+* Checkout Repo
 
 ```
 git clone <repo>
@@ -19,12 +19,16 @@ echo "docker" >> .gitignore
 Replace ```app-name``` with project repo name
 
 from ```docker``` folder
-Composer install & running migrations
 
-``` docker-compose exec app /bin/bash ```
+```
+docker-compose build
+docker-compose up -d 
+docker-compose down
+update the .env file DB_HOST to "mysql"; the equivalent service
 
-inside the container
+docker-compose exec app php artisan migrate
+docker-compose exec app php artisan tinker
+where <app> is the container name
 
-``` composer install ```
-
-``` docker-compose exec app php artisan migrate ```
+docker-compose exec app ./vendor/bin/phpunit
+```
