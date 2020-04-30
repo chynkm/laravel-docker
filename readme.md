@@ -9,11 +9,12 @@
 
 * Checkout Leads Repo
 
-``` git clone <repo>```
-
-``` cd <repo>```
-
-```git submodule add <laravel-docker-git-link> docker```
+```
+git clone <repo>
+cd <repo>
+git clone <laravel-docker-git-link> docker
+echo "docker" >> .gitignore
+```
 
 Replace ```app-name``` with project repo name
 
@@ -25,6 +26,5 @@ Composer install & running migrations
 inside the container
 
 ``` composer install ```
-
 
 ``` docker-compose exec app php artisan migrate ```
