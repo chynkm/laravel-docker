@@ -22,7 +22,7 @@ from ```docker``` folder
 
 ```
 docker-compose build
-docker-compose up -d 
+docker-compose up -d
 docker-compose down
 update the .env file DB_HOST to "mysql"; the equivalent service
 
@@ -32,3 +32,6 @@ where <app> is the container name
 
 docker-compose exec app ./vendor/bin/phpunit
 ```
+
+To access PHP container
+```docker-compose exec app-name /bin/bash```
